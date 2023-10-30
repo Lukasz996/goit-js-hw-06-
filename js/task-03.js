@@ -24,3 +24,18 @@ gallery.insertAdjacentHTML('beforeend', imagesHTML.join(''))
 gallery.style.display = 'flex'
 gallery.style.flexWrap = 'wrap'
 
+const lis = gallery.querySelectorAll('li')
+lis.forEach(li => {
+	li.style.listStyle = 'none'
+	li.style.margin = '10px'
+	li.style.flexBasis = 'calc(30% - 30px)'
+	li.style.maxWidth = 'calc(30% - 30px)'
+	li.style.maxHeight = 'calc(30% - 30px)'
+})
+
+const imgs = gallery.querySelectorAll('img')
+imgs.forEach(img => {
+	img.style.width = '100%'
+})
+
+
